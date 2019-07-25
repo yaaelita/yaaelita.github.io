@@ -73,8 +73,8 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 900px; 
+   width: 100%;
+   height: 100vh;
 }
 
 /* ---Menu---*/
@@ -260,7 +260,7 @@ nav {
 
 .carousel {
   width: 100%;
-/*   height: 1020px; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,11 +270,11 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 900px; 
+  max-height: 100%;
   display: flex;
   transition: transform 0.6s ease;
   position: relative;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 
 .carousel-control {
@@ -366,7 +366,7 @@ nav {
   align-self: flex-end;
   justify-content: space-between;
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   width: 10%;
 }
 
@@ -387,12 +387,15 @@ nav {
 
 
 .carousel-img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 820px; 
+/*   top: 0; */
+/*   left: 0; */
+/*   width: 100%; */
+/*   min-height: 820px;  */
   opacity: 0;
+/*   min-height: 100%; */
+/*   min-width: 100%; */
   transition: opacity 1s ease;
+  background-size: cover;
 }
 
 .carousel-img:first-child {
@@ -690,19 +693,30 @@ nav {
   width: 100%;
 }
 
+
+.purchase-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 65%;
+}
+
 .purchase-txt-container {
-  margin: auto;
-  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
 }
 
 .purchase-now-title {
   display: block;
   font-family: 'raleway-regular', 'arial', sans-serif;
   font-size: 28px;
-  line-height: 1.2;
+/*   line-height: 1.2; */
   font-weight: 400;
-  color: #fff;
-  width: 100%;
+  color: #fff;	
+  margin: 0;
 }
 
 .purchase-now-company-name {
@@ -714,19 +728,10 @@ nav {
   display: block;
   font-family: 'montserrat-light-regular', 'arial', sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+/*   line-height: 1.2; */
   font-weight: 300;
   color: #615855;
-  width: 100%;
-}
-
-.purchase-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  item-align: center;
-  height: 150px;
-  width: 65%;
+    margin: 0;
 }
 
 .btn-container {
@@ -734,7 +739,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   height: 150px;
-  width: 45%;
+  width: 40%;
   padding-right: 30px;
 }
 
@@ -801,7 +806,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 100%; 
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
 }
@@ -809,8 +814,7 @@ nav {
 .article-preview {
   display: block;
   width: 370px;
-  max-height: 340px;
-  margin: 20px; 
+  height: 340px;
   text-align: center;
   position: relative;
 }
@@ -1698,7 +1702,7 @@ video {
 
 .footer-nav {
   list-style-type: none;
-  width: 550px; 
+  width: 100%;
   min-height: 56px;
   padding: 0;
   background-color: transparent;
@@ -1722,8 +1726,6 @@ video {
 .footer-links-item:hover {
   color: #c7b299;
 }
-
-
 
 .border-left {
   padding: 0 0px 0 10px;
@@ -1755,11 +1757,7 @@ video {
 
 @media(max-width: 480px) {
    
-.header {
-  width: 100%;
-  max-height: 750px; 
-}
-   
+ 
   .logo-txt {
      display: none;
    }
@@ -1778,12 +1776,7 @@ video {
   .btn-bag {
     display: none;
   }
-
-  .carousel-wrapper {
-    max-height: 780px;
-  }
-
-
+ 
   .carousel-center {
     width: 55%;
   }
@@ -1797,11 +1790,6 @@ video {
   .carousel-title-h2 {
     display: none;
   }
-  
-  .carousel-img {
-  width: auto;
-  min-height: 820px;
-}
 
 .carousel-control-left:after {
   left: 15px;
@@ -2028,7 +2016,7 @@ video {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    width: 90%;
+    width: 95%;
   }
 
   .footer-txt-right {
