@@ -274,7 +274,7 @@ nav {
   display: flex;
   transition: transform 0.6s ease;
   position: relative;
-/*   overflow: hidden; */
+  overflow: hidden; 
 }
 
 .carousel-control {
@@ -385,15 +385,8 @@ nav {
   background-color: black;
 }
 
-
 .carousel-img {
-/*   top: 0; */
-/*   left: 0; */
-/*   width: 100%; */
-/*   min-height: 820px;  */
   opacity: 0;
-/*   min-height: 100%; */
-/*   min-width: 100%; */
   transition: opacity 1s ease;
   background-size: cover;
 }
@@ -437,11 +430,6 @@ nav {
   border: 3px solid #d3c1ad;
   background-color: black;
 }
-
-
-
-
-
 
 .carousel-center {
   display: flex;
