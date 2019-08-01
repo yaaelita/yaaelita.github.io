@@ -62,14 +62,13 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: block;
   box-sizing: border-box;
 }
 
 .container {
   width: 100%;
-  margin: 0 auto;
 }
 
 .header {
@@ -81,7 +80,8 @@ body {
 
 .logo-container {
   display: flex;
-  width: 60%;
+  min-width: 60%;
+  max-width: 100%;
   justify-content: space-between;
   position: absolute;
   top: 20px;
@@ -94,14 +94,18 @@ body {
   justify-content: center;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 70%;
+  max-width: 70%;
+  min-width: 50%;
 }
 
+/* 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 90%;
 }
+ */
 
 .logo {
   display: flex;
@@ -180,7 +184,6 @@ nav {
   height: 50px;
   position: absolute;
   top: 20px;
-  left: 160px;
   cursor: pointer;
   z-index: 999;
   opacity: 0;
@@ -264,17 +267,19 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .carousel-wrapper {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   display: flex;
   transition: transform 0.6s ease;
   position: relative;
   overflow: hidden; 
+
 }
 
 .carousel-control {
@@ -386,9 +391,14 @@ nav {
 }
 
 .carousel-img {
+  position: absolute;
   opacity: 0;
+  min-width: 100%;
+  max-height: 100%;
   transition: opacity 1s ease;
   background-size: cover;
+  background-repeat: no-repeat; 
+  overflow: hidden;
 }
 
 .carousel-img:first-child {
@@ -434,16 +444,20 @@ nav {
 .carousel-center {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: 45%;
+  max-height: 50%;
+  overflow: hidden;
 }
 
 .carousel-title-h2 {
   display: block;
   font-family: 'raleway-medium-regular', 'arial', sans-serif;
   font-size: 36px;
+  text-align: center;
   line-height: 1.2;
   font-weight: 500;
   color: #fff;
@@ -453,6 +467,7 @@ nav {
   display: block;
   font-family: 'raleway-extra-bold-regular', 'arial', sans-serif;
   font-size: 52px;
+  text-align: center;
   line-height: 1.2;
   font-weight: 800;
   color: #fff;
@@ -525,7 +540,7 @@ nav {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: space-between;
 }
@@ -728,6 +743,7 @@ nav {
   align-items: center;
   height: 150px;
   max-width: 40%;
+  min-width: 30%;
   padding-right: 30px;
 }
 
@@ -1137,7 +1153,8 @@ video {
   justify-content: center;
   align-items: center;
   flex-direction: space-between;
-  width: 55%;
+  min-width: 60%;
+  max-width: 80%;
   min-height: 250px;
 }
 
@@ -1275,7 +1292,7 @@ video {
 }
 
 .posts-box {
-  width: 60%;
+  width: 100%;
   min-height: 500px;
   display: flex;
   flex-wrap: nowrap;
@@ -1481,6 +1498,7 @@ video {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 10px;
 }
 
 .client-logo-1 {
@@ -1683,7 +1701,8 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  min-width: 60%;
+  max-width: 90%;
 }
 
 .footer-column-txt {
@@ -1696,14 +1715,14 @@ video {
 
 .footer-menu {
   display: flex;
-  width: 40%;
+  width: 45%;
   justify-content: flex-start;
   align-items: center;
 }
 
 .footer-nav {
   list-style-type: none;
-  width: 100%;
+  width: 40%;
   min-height: 56px;
   padding: 0;
   background-color: transparent;
@@ -1739,7 +1758,7 @@ video {
   justify-content: flex-end;
   align-items: center;
   min-height: 13px;
-  width: 50%;
+  width: 45%;
   padding: 0 5px 0 5px;
 }
 
@@ -1753,10 +1772,62 @@ video {
   padding: 0 5px 0 5px;
 }
 
-
 /*----MOBILE---*/
 
-@media(max-width: 480px) {
+@media (max-width: 1180px) {
+
+  .posts-box {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo-txt {
+     display: none;
+   }
+
+.carousel-title-h2 {
+     display: none;
+}
+
+   
+  .logo-container  {
+     justify-content: space-around;
+     width: 100%;
+   }
+   
+   .logo {
+     justify-content: center;
+   } 
+   
+  .nav-icons {
+    display: none;
+  }
+  
+    .carousel-center {
+    width: 60%;
+  }
+  
+  .posts-box {
+  flex-wrap: wrap;
+ }  
+ 
+ .screenshots-container {
+    width: 100%;
+ }
+ 
+ .btn-container {
+    justify-content: center;
+  }
+  
+  .stat-wrapper {
+  	width: 90%
+  }
+}
+
+
+/* @media (min-width: 320px) and (max-width: 480px) */
+@media (max-width: 767px) {
    
  
   .logo-txt {
@@ -1765,6 +1836,11 @@ video {
    
   .logo-container  {
      justify-content: space-around;
+     width: 100%;
+   }
+   
+   .logo {
+     justify-content: center;
    }
 
   .nav-icons {
@@ -1810,11 +1886,15 @@ video {
 .carousel-txt {
   font-size: 14px;
 }
-   
+
+.posts-box {
+  flex-wrap: wrap;
+ }  
    /* ---Menu---*/
    
   nav {
    display: block;
+   min-width: 10%;
   }
 
   .nav {
@@ -1824,11 +1904,15 @@ video {
     width: 100%;
     flex-direction: column;
   }
+  
+  .menu {
+    width: 30%;
+  }
 
   .nav-wrapper {
     width: 70%;
     max-height: 30px;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
 
   .burger-item {
@@ -1838,7 +1922,7 @@ video {
  #mobile-nav {
     display: block; 
     border: 1px solid white; 
-    right: 20px; 
+/*     right: 20px;  */
  }
 
  #mobile-nav:checked ~ .burger-item {
@@ -1877,7 +1961,7 @@ video {
    
    /* ---Options---*/
    .options-wrapper {
-      width: 100%;
+      width: 90%;
    }
    
    .link-services {
@@ -1939,10 +2023,6 @@ video {
 
   /* ---Stat---*/
   
-  .stat-wrapper {
-    flex-wrap: wrap;
-    width: 95%;
-  }
 
   .statistics {
     width: 17%;
@@ -2049,6 +2129,8 @@ video {
 
   .footer-nav {
     margin: 0;
+    width: 100%;
+    justify-content: center;
   }
 
   .footer-menu {
